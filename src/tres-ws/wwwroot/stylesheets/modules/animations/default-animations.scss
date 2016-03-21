@@ -1,0 +1,25 @@
+
+
+@mixin mgBoxesOutAni() {
+    -webkit-animation-name: mgBoxesOutAni;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+
+    @keyframes mgBoxesOutAni {
+        0% {
+            -webkit-transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(1.1);
+        }
+        100% {
+            -webkit-transform: scale(0.6);
+            opacity: 0;
+        }
+    }
+}
+
+.mgBoxesAni {
+    @include mgBoxesOutAni();
+}

@@ -1,0 +1,19 @@
+/* EXTERNALS DEPS */
+@import "./resources/bower_components/semantic-ui-icon/icon.min.css";
+@import  "sass/resources/bower_components/bootstrap/scss/bootstrap.scss";
+
+/* EXTERNAL DEPS */
+@import "modules/animations/default-animations.scss";
+@import "modules/mixins/default-mixins.scss";
+@import "modules/defaults/default.scss";
+
+/* MAIN PAGE */
+@import "modules/views/mainpage/animations/_mainAnimations.scss";
+@import "modules/views/mainpage/_mainpage.scss";
+// main > childrens
+@import "modules/views/mainpage/_main_administration.scss";
+// administration > childrens
+@import "modules/views/mainpage/administration/_adAnnouncers.scss";
+@import "modules/views/mainpage/administration/_adData.scss";
+@import "modules/views/mainpage/administration/_adMain.scss";
+@import "modules/views/mainpage/administration/_adNodes.scss";

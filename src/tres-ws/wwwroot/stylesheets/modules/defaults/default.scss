@@ -1,0 +1,96 @@
+/// <reference path="../mixins/default-mixins.scss" />
+
+/* @media customs */
+
+// Extra small screen / phone
+$xs: 0;
+// Small screen / phone
+$sm: 544px;
+// Medium screen / tablet
+$md: 768px;
+// Large screen / desktop
+$lg: 992px;
+// Extra large screen / wide desktop
+$xl: 1200px;
+
+// colors
+
+/* defaults colors */
+$p: #00B0FF;
+
+/* panel left middle */
+$poBackground: #00B0FF;
+$poFill: #FFF;
+
+/* sector top */
+$bgBarT: #f3f3f3;
+
+/* sector middle */
+$bgBarIntMd: #FFF;
+$bordersTpMid: #f3f3f3;
+
+// font global default color
+$dfcolor: #546E7A;
+
+// svg
+$svgSize: 50% !default;
+$svgFill: #cccccc;
+
+// searchmg
+$bgColorSrMg: #FFF;
+$fillSearchIcon: #00B0FF;
+
+// fonts
+@include getFont('roboto', './resources/fonts/Roboto/Roboto-Regular.ttf');
+@include getFont('wf_segoe', './resources/fonts/wf_segoe-ui_normal.woff');
+
+
+$family: 'wf_segoe', sans-serif;
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: $family;
+    color: $dfcolor;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    width: auto !important;
+    height: 100% !important;
+    color: inherit !important;
+}
+
+a:active {
+    color: inherit !important;
+}
+
+svg {
+    width: $svgSize;
+    fill: $svgFill;
+}
+
+/* PLACE HOLDERS */
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #e0e0e0;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding-top: 3px;
+    text-align: center;
+}
+
+::-ms-clear {
+    display: none;
+}
