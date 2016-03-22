@@ -1,13 +1,14 @@
 ﻿/// <reference path='../../typings/tsd.d.ts'/>
 import * as React from 'react';
 import Store from '../stores/store';
+import { PropStates } from '../stores/maProps';
 
 interface Props {
     title: string;
     children: any;
 }
 
-export class App extends React.Component<Props, any> {
+export class App extends React.Component<Props, PropStates> {
     constructor(props: Props) {
         super(props);
         this.state = this.getState();
@@ -33,7 +34,12 @@ export class App extends React.Component<Props, any> {
     render() {
         return (
             <div id="main">
-                { this.props.children }
+                {
+                    React.cloneElement(this.props.children,
+                        {
+                            dataMg: this.state.dataMg
+                        })
+                }
             </div>
         )
     }

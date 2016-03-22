@@ -1,8 +1,11 @@
 ﻿import { MaHandlers } from './maHandlers';
+export interface PropStates {
+    dataMg: string;
+}
 
 export class MaProps {
-    testasd: string;
+    dataMg: string;
     constructor() {
-        this.testasd = "hello words";
+        this.dataMg = "hello words";
     }
 }

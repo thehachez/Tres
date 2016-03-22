@@ -8,8 +8,11 @@ interface Props {
     children: any;
 }
 
-export class Main extends React.Component<Props, any> {
-    
+interface State {
+    dataMg: string;
+}
+
+export class Main extends React.Component<Props, State> {
     render() {
         return (
             <div className="cn_main">

@@ -1,10 +1,11 @@
 ﻿import Alt from '../alt';
 import { MaHandlers } from './maHandlers';
+import { PropStates } from './maProps';
 import AdActions from '../actions/maActions';
 
 export interface HanderlsDef {
     handlerTest: (prop: string) => void;
-} 
+}
 
 export class Store extends MaHandlers implements AltJS.StoreModel<any> {
     bindListeners: any;
@@ -18,5 +19,5 @@ export class Store extends MaHandlers implements AltJS.StoreModel<any> {
     }
 }
 
-export default Alt.createStore(Store, 'Store');
+export default Alt.createStore<PropStates>(Store, 'Store');
 

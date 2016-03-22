@@ -1,7 +1,6 @@
 /// <reference path="../mixins/default-mixins.scss" />
 
 /* @media customs */
-
 // Extra small screen / phone
 $xs: 0;
 // Small screen / phone
@@ -43,8 +42,6 @@ $fillSearchIcon: #00B0FF;
 // fonts
 @include getFont('roboto', './resources/fonts/Roboto/Roboto-Regular.ttf');
 @include getFont('wf_segoe', './resources/fonts/wf_segoe-ui_normal.woff');
-
-
 $family: 'wf_segoe', sans-serif;
 
 html,

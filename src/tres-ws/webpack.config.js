@@ -3,17 +3,19 @@
 module.exports = {
     devtool: 'source-map',
     debug: true,
+    cache: true,
+    watch: true,
     entry: './client/main.tsx',
     output: {
         filename: './wwwroot/builds/main.js'
     },
     plugins: [
-        new WEBPACK.optimize.OccurenceOrderPlugin(),
-        new WEBPACK.HotModuleReplacementPlugin(),
-        new WEBPACK.OldWatchingPlugin(),
+        //new WEBPACK.optimize.OccurenceOrderPlugin(),
+        //new WEBPACK.HotModuleReplacementPlugin(),
+        //new WEBPACK.OldWatchingPlugin(),
         // new WEBPACK.NewWatchingPlugin(),
         // https://github.com/webpack/docs/wiki/optimization#deduplication
-        new WEBPACK.optimize.DedupePlugin(),
+        //new WEBPACK.optimize.DedupePlugin(),
         new WEBPACK.NoErrorsPlugin()
     ],
     resolve: {
