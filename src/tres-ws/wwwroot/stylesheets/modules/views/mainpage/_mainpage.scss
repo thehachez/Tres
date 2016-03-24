@@ -1,4 +1,4 @@
-/* MAIN */
+/// <reference path="../../defaults/default.scss" />
 
 .cn_main {
     width: 100%;
@@ -65,10 +65,10 @@
     @extend .col-lg-1;
     @extend .col-xl-1;
     @media(max-width: $sm) {
-        height: 0%;
+        height: 0;
     }
     @media(max-width: 731px) and (orientation:landscape) {
-        height: 0%;
+        height: 0;
     }
 }
 
@@ -112,13 +112,12 @@
     @include collapse();
     @include make-row();
     @media(max-width: $sm) {
-        height: 0%;
+        height: 0;
     }
     @media(max-width: 731px) and (orientation:landscape) {
-        height: 0%;
+        height: 0;
     }
 }
-
 
 /* components col left*/
 
@@ -195,11 +194,11 @@
     justify-content: center;
     @include collapse();
     @media(max-width: $sm) {
-        height: 0%;
+        height: 0;
         display: none;
     }
     @media(max-width: 731px) and (orientation: landscape) {
-        height: 0%;
+        height: 0;
         display: none;
     }
 }
@@ -230,7 +229,7 @@
     width: 100%;
     height: 100%;
     background-color: $p;
-    background-image: url(/images/user.jpg);
+    background-image: url(../images/user.jpg);
     background-size: cover;
     background-position: center center;
     -webkit-clip-path: circle(30% at 50% 50%);
@@ -251,19 +250,19 @@
 .user-status-on {
     @extend .user-status;
     background: #94f002;
-    box-shadow: 0px 0px 10px #94f002;
+    box-shadow: 0 0 10px #94f002;
 }
 
 .user-status-inactive {
     @extend .user-status;
     background: #FFF;
-    box-shadow: 0px 0px 10px #FFF;
+    box-shadow: 0 0 10px #FFF;
 }
 
 .user-status-off {
     @extend .user-status;
     background: #ff0f2b;
-    box-shadow: 0px 0px 10px #ff0f2b;
+    box-shadow: 0 0 10px #ff0f2b;
 }
 
 .user-id {
@@ -306,7 +305,7 @@
     @include make-row();
     @include collapse();
     @media(min-width: $lg) {
-        height: 0%;
+        height: 0;
     }
 }
 
@@ -343,7 +342,7 @@
     height: 100%;
     margin-left: 40px;
     border-radius: 4px;
-    box-shadow: 0px 0px 10px #e0e6ea, -1px 20px 40px #e9eef1;
+    box-shadow: 0 0 10px #e0e6ea, -1px 20px 40px #e9eef1;
 }
 
 .ul_helper {
@@ -356,16 +355,15 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        * {
-            align-self: center;
-        }
         svg {
             width: 60%;
+            align-self: center;
         }
         p {
             padding-right: 15px;
-            margin: 0px;
+            margin: 0;
             font-size: 18px;
+            align-self: center;
         }
     }
     @include collapse();

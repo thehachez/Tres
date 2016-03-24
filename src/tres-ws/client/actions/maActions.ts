@@ -1,22 +1,25 @@
 ﻿import Alt from '../alt';
 
-interface AdActionsDef {
-    SET_DATA_MG(data: string, defer?: Promise<string>): string;
+interface MaActionsDef extends AltJS.Action<any> {
+    SET_DATA_MG(args: string, defer?: (data: Promise<string>)=> void): string;
 }
 
-class MaActions implements AltJS.ActionsClass {
+interface MaActionsDefClass {
+    setDataMg(args: string, defer?: (data: Promise<string>) => void): string;
+}
+
+class MaActions implements AltJS.ActionsClass, MaActionsDefClass {
     /* 
      * ACTIONS FOR FLUX IMPLEMENT
      */
-
     //dispatch(...payload: Array<any>) {
     //}
 
-    setDataMg<T>(data: T): T {
-        return data;
+    setDataMg(args: string): string {
+        return args;
     }
 }
 
 
-export default Alt.createActions<AdActionsDef>(MaActions);
+export default Alt.createActions<MaActionsDef>(MaActions);
 

@@ -40,8 +40,7 @@ $bgColorSrMg: #FFF;
 $fillSearchIcon: #00B0FF;
 
 // fonts
-@include getFont('roboto', './resources/fonts/Roboto/Roboto-Regular.ttf');
-@include getFont('wf_segoe', './resources/fonts/wf_segoe-ui_normal.woff');
+@include getFont('wf_segoe', 'css/resources/fonts/wf_segoe-ui_normal.woff');
 $family: 'wf_segoe', sans-serif;
 
 html,

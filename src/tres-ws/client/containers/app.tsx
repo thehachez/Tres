@@ -32,15 +32,10 @@ export class App extends React.Component<Props, PropStates> {
     }
 
     render() {
-        return (
-            <div id="main">
-                {
-                    React.cloneElement(this.props.children,
-                        {
-                            dataMg: this.state.dataMg
-                        })
-                }
-            </div>
-        )
+
+        return React.cloneElement(this.props.children,
+            {
+                dataMg: this.state.dataMg
+            })
     }
 };

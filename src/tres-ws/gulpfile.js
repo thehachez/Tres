@@ -1,24 +1,26 @@
-﻿/// <binding BeforeBuild='webpack' ProjectOpened='webpack, sass' />
-"use strict";
+﻿"use strict";
 var gulp = require("gulp");
 var gutil = require("gulp-util");
 var gulpSass = require('gulp-sass');
 var gulpNotify = require('gulp-notify');
+var gulpRename = require("gulp-rename");
 var webpack = require("webpack");
 var gulpWwebpack = require("webpack-stream");
 var browserSync = require('browser-sync').create();
 var path = require("path");
-
 var node_modules = path.resolve(__dirname, 'node_modules');
 var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
 var webroot = "./wwwroot/";
+var dev = true;
+
 var config = {
     url: "localhost",
     port: 58603,
-    sassFilesPath: webroot + "stylesheets/modules/**/*.scss",
-    sassFilesEntry: webroot + "stylesheets/main.scss",
-    sassFilesOutput: webroot + "builds"
+    sassFilesPath:   webroot + "stylesheets/modules/**/*.scss",
+    sassFilesEntry:  webroot + "stylesheets/main.scss",
+    sassFilesOutput: webroot + "stylesheets",
+    sassfileName: dev ? 'main_dev.css' : 'main.css'
 };
 
 var WEBPACKCONF = {
@@ -28,9 +30,8 @@ var WEBPACKCONF = {
     debug: true,
     cache: true,
     watch: true,
-    entry: './client/main.tsx',
     output: {
-        filename: './wwwroot/builds/main.js'
+        filename: 'main.js'
     },
     plugins: [
         /* PRODUCTION PLUGINS */
@@ -70,16 +71,17 @@ gulp.task('init', function () {
 });
 
 gulp.task("webpack", function (done) {
-    return gulp.src(WEBPACKCONF.output.filename)
+    return gulp.src('./client/main.tsx')
    .pipe(gulpWwebpack(WEBPACKCONF, webpack, function (err, stats) {
        if (err)
-           throw new gutil.PluginError("webpack-dev-server", err);
+           gutil.PluginError("webpack-dev-server", err);
        else
            Object.keys(stats.compilation.assets).forEach(function (key) {
                gutil.log('Webpack: output: ', gutil.colors.green(key));
            });
            gutil.log('Webpack: ', gutil.colors.blue('finished ', stats.compilation.name));
    }))
+   .pipe(gulp.dest('./wwwroot/builds/dev/'))
    .pipe(gulpNotify({
        message: 'Webpack compiled: <%= file.relative %>',
        sound: false
@@ -91,6 +93,7 @@ gulp.task("webpack", function (done) {
 gulp.task('sass', function () {
     gulp.src(config.sassFilesEntry)
         .pipe(gulpSass().on('error', gulpSass.logError))
+        .pipe(gulpRename(config.sassfileName))
         .pipe(gulp.dest(config.sassFilesOutput))
         .pipe(browserSync.stream())
         .pipe(gulpNotify({
@@ -98,4 +101,5 @@ gulp.task('sass', function () {
             sound: false
         }));
 });
+
 

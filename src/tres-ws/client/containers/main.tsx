@@ -4,15 +4,11 @@ import { UserProfiler } from '../components/main/userProfiler';
 import { PaOptions } from '../components/main/paOptions';
 
 interface Props {
-    userStatus: string;
     children: any;
-}
-
-interface State {
     dataMg: string;
 }
 
-export class Main extends React.Component<Props, State> {
+export class Main extends React.Component<Props, any> {
     render() {
         return (
             <div className="cn_main">
@@ -40,12 +36,13 @@ export class Main extends React.Component<Props, State> {
                         <div className="row_ma_mid_top">
                         </div>
                         <div className="row_ma_mid_mid">
-                            {
+                            {/* {
                                 React.cloneElement(this.props.children,
                                     {
-                                        dataMg: this.state.dataMg
+                                        dataMg: this.props.dataMg
                                     })
                             }
+                                */}
                         </div>
 
                         <div className="row_ma_mid_bot">

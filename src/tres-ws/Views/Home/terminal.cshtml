@@ -1,0 +1,17 @@
+﻿@{ 
+  ViewData["Title"] = "tres terminal";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["title"]</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+    @Html.React("CommentBox", new
+{
+    name = "Daniel"
+})
+</body>
+</html>
