@@ -11,15 +11,17 @@ var path = require("path");
 var node_modules = path.resolve(__dirname, 'node_modules');
 var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
-var webroot = "./wwwroot/";
+var webroot = "./client/";
+var webrootOut = "./wwwroot/";
+
 var dev = true;
 
 var config = {
     url: "localhost",
     port: 58603,
-    sassFilesPath:   webroot + "stylesheets/modules/**/*.scss",
-    sassFilesEntry:  webroot + "stylesheets/main.scss",
-    sassFilesOutput: webroot + "stylesheets",
+    sassFilesPath: webroot + "stylesheets/modules/**/*.scss",
+    sassFilesEntry: webroot + "stylesheets/main.scss",
+    sassFilesOutput: webrootOut + "stylesheets",
     sassfileName: dev ? 'main_dev.css' : 'main.css'
 };
 
@@ -75,11 +77,14 @@ gulp.task("webpack", function (done) {
    .pipe(gulpWwebpack(WEBPACKCONF, webpack, function (err, stats) {
        if (err)
            gutil.PluginError("webpack-dev-server", err);
-       else
-           Object.keys(stats.compilation.assets).forEach(function (key) {
-               gutil.log('Webpack: output: ', gutil.colors.green(key));
-           });
-           gutil.log('Webpack: ', gutil.colors.blue('finished ', stats.compilation.name));
+    
+       Object.keys(stats.compilation.assets).forEach(function (key) {
+           gutil.log('Webpack: output: ', gutil.colors.green(key));
+       });
+
+       gutil.log('Webpack: ', gutil.colors.blue('finished ', stats.compilation.name));
+       browserSync.reload();
+
    }))
    .pipe(gulp.dest('./wwwroot/builds/dev/'))
    .pipe(gulpNotify({

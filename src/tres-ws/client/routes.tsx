@@ -4,13 +4,23 @@ import { Router, Route, IndexRoute, browserHistory, IndexRedirect } from 'react-
 
 import { App } from './containers/app';
 import { Main } from './containers/main';
+
+import { MainAdministration } from './containers/main_administration';
+import { AdMain } from './components/main_administration/adMain';
+import { AdData } from './components/main_administration/adData';
+
 export default render((
     <Router history={ browserHistory }>
         <Route path='/' component={ App } >
-            <IndexRedirect to="/main" />
             <Route path="main" component={ Main }>
-            </Route> 
+                <IndexRedirect to="/main/administration/admain" />
+                <Route path="administration" component={ MainAdministration }>
+                    <IndexRoute component={ AdMain }/>
+                    <Route path="admain" component={ AdMain }/>
+                    <Route path="addata" component={ AdData }/>
+                </Route>
+            </Route>
         </Route>
-        <Route path="*" component={ Main }/>
     </Router>
+
 ), document.getElementById("main"));

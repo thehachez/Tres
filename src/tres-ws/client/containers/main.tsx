@@ -20,12 +20,9 @@ export class Main extends React.Component<Props, any> {
                         <div className="row_ma_lf_mid">
 
                             <UserProfiler userStatus="user-status-on"/>
-                            {/*
-                            * PRINCIPAL PANEL
-                            * MIDDLE LEFT OPTIONS
-                            *
-                            */}
+
                             <PaOptions />
+
                         </div>
                         <div className="row_ma_lf_bot">
                         </div>
@@ -36,13 +33,12 @@ export class Main extends React.Component<Props, any> {
                         <div className="row_ma_mid_top">
                         </div>
                         <div className="row_ma_mid_mid">
-                            {/* {
+                            {
                                 React.cloneElement(this.props.children,
                                     {
                                         dataMg: this.props.dataMg
                                     })
                             }
-                                */}
                         </div>
 
                         <div className="row_ma_mid_bot">

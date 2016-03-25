@@ -18,7 +18,7 @@ export class Store extends MaHandlers implements AltJS.StoreModel<any> {
         super();
         this.bindListeners(
             {
-                handlerTest: AdActions.SET_DATA_MG
+                handlerTest: AdActions.GO_TO_MAIN_BOXES
             }
         );
     }

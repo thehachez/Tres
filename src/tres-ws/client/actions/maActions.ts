@@ -1,25 +1,28 @@
 ﻿import Alt from '../alt';
+import * as Tres from '../core/tresCore';
 
-interface MaActionsDef extends AltJS.Action<any> {
-    SET_DATA_MG(args: string, defer?: (data: Promise<string>)=> void): string;
+interface IntMaActionsUpper extends AltJS.Action<any> {
+    GO_TO_MAIN_BOXES(args: string, defer?: (data: Promise<string>)=> void): string;
 }
 
-interface MaActionsDefClass {
-    setDataMg(args: string, defer?: (data: Promise<string>) => void): string;
+interface IntMaActions {
+    goToMainBoxes(args: string, defer?: (data: Promise<string>) => void): string;
 }
 
-class MaActions implements AltJS.ActionsClass, MaActionsDefClass {
+class MaActions implements AltJS.ActionsClass, IntMaActions {
     /* 
      * ACTIONS FOR FLUX IMPLEMENT
      */
     //dispatch(...payload: Array<any>) {
     //}
 
-    setDataMg(args: string): string {
+
+    // PURE ACTIONS
+    goToMainBoxes(args: string): string {
         return args;
     }
 }
 
-
-export default Alt.createActions<MaActionsDef>(MaActions);
-
+const ACINSTANCE = Alt.createActions(MaActions);
+export default <IntMaActionsUpper>ACINSTANCE;
+export let Actions = <IntMaActions>ACINSTANCE;

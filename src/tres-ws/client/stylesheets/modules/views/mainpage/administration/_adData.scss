@@ -1,0 +1,359 @@
+/* ADMINISTRATION - AD DATA */
+
+.con_adData {
+    width: 100%;
+    height: 100%;
+    @include make-container-max-widths();
+}
+
+//  SECTION MID
+//
+///
+
+/* rows middle  */
+
+.row_adData_top {
+    width: 100%;
+    height: 15%;
+    background: $bgBarIntMd;
+    @include make-row();
+    @include collapse();
+
+    @media(max-width: $sm) {
+        height: 10%;
+    }
+}
+
+.row_adData_mid {
+    width: 100%;
+    height: 85%;
+    @include make-row();
+    @include collapse();
+
+    @media(max-width: $sm) {
+        height: 90%;
+        flex-direction: column;
+    }
+}
+
+
+/* addata mid top */
+
+.col_adData_tp_left {
+    height: 100%;
+    background: $bgColorSrMg;
+    @include collapse();
+    @extend .col-xs-6;
+    @extend .col-sm-5;
+    @extend .col-md-5;
+    @extend .col-lg-5;
+    @extend .col-xl-5;
+}
+
+.col_adData_tp_mid {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: $bgColorSrMg;
+    border-right: 1px solid $bordersTpMid;
+    @include collapse();
+    @extend .col-xs-6;
+    @extend .col-sm-5;
+    @extend .col-md-5;
+    @extend .col-lg-5;
+    @extend .col-xl-5;
+}
+
+.col_adData_tp_right {
+    height: 100%;
+    @include collapse();
+    @extend .col-xs-0;
+    @extend .col-sm-2;
+    @extend .col-md-2;
+    @extend .col-lg-2;
+    @extend .col-xl-2;
+}
+
+
+/* addata mid middle */
+
+.col_adData_md_left {
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid $bordersTpMid;
+    @include collapse();
+    @extend .col-xs-10;
+    @extend .col-sm-10;
+    @extend .col-md-10;
+    @extend .col-lg-10;
+    @extend .col-xl-10;
+}
+
+.col_adData_md_mid {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    @include collapse();
+    @extend .col-xs-2;
+    @extend .col-sm-2;
+    @extend .col-md-2;
+    @extend .col-lg-2;
+    @extend .col-xl-2;
+
+    @media(min-width: $lg) and (max-width: $xl) {
+        justify-content: flex-end;
+    }
+}
+
+// components
+
+/* panel data management */
+
+.cn_panel_datamg {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media(max-width: 731px) and (orientation: landscape) {
+        height: 100%;
+    }
+
+    @media(max-width: $sm) {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    @media(min-width: $lg) and (max-width: $xl) {
+        width: 80%;
+    }
+}
+
+.ul_panel_datamg_items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: $sm) {
+        flex-direction: row;
+        align-self: center;
+        width: 80%;
+    }
+
+    @include collapse();
+
+    li {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+
+        svg {
+            cursor: pointer;
+        }
+
+        svg:hover {
+            fill: $p;
+        }
+
+        * {
+            align-self: center;
+        }
+    }
+}
+
+
+/* management data sector */
+
+
+/* search in data */
+
+.cn_searchmg {
+    width: 80%;
+    height: 100%;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.ul_searchmg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    @include collapse();
+
+    li:nth-child(1) {
+        width: 80%;
+    }
+
+    li:nth-child(2) {
+        width: 20%;
+    }
+
+    li {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        svg {
+            width: 70%;
+            fill: $fillSearchIcon;
+        }
+
+        input {
+            align-self: center;
+            width: 100%;
+            height: 100%;
+            padding-left: 25px;
+            font-size: 25px;
+            border: none;
+            background: transparent;
+        }
+    }
+}
+
+
+/* boxes of data */
+
+.cn_adData_mag {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+    @include make-container();
+
+    @media(max-width: $sm) {
+        @include collapse();
+    }
+}
+
+.cn_adData_mag::-webkit-scrollbar {
+    width: 18px;
+}
+
+.cn_adData_mag::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.cn_adData_mag::-webkit-scrollbar-thumb {
+    background: #f3f3f3;
+}
+
+.ul_boxsdatamg {
+    min-width: 45%;
+    height: 38%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 15px;
+    cursor: pointer;
+    border: 1px solid #efefef;
+
+    @media(max-width: 731px) and (orientation: landscape) {
+        min-width: 100%;
+        height: 65%;
+        margin: 0px;
+        border-top: 0;
+        border-bottom: 1px solid #e0e6ea;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    @media(min-width: $lg) and (max-width: $xl) {
+        min-width: 44%;
+        height: 34%;
+        margin: 10px;
+    }
+
+    @media(max-width: $sm) {
+        min-width: 100%;
+        margin: 0px;
+        margin-bottom: 25px;
+        border-top: 0;
+        border-bottom: 1px solid #e0e6ea;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    li {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-transform: capitalize;
+
+        p {
+            @include collapse();
+        }
+    }
+
+    .boxdatamg_li_top {
+        padding-left: 20px;
+
+        p {
+            align-self: flex-end;
+            font-size: 1.6em;
+        }
+    }
+
+    .boxdatamg_li_mid {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        svg {
+            width: 100%;
+        }
+        p {
+            padding-left: 6px !important;
+            align-self: flex-start;
+            color: #cccccc;
+        }
+    }
+
+    .boxdatamg_li_bot {
+        flex-direction: row;
+
+        .boxdat_libot_div_left {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .boxdat_libot_div_right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            @media(max-width: 731px) and (orientation: landscape) {
+                justify-content: flex-start;
+            }
+
+            .boxdat_timeatention {
+                font-family: "helvetica";
+                align-self: center;
+                font-size: 1.5em;
+                color: #7c7c7c;
+
+                @media(max-width: 731px) and (orientation: landscape) {
+                    font-size: 1.5em;
+                }
+
+                @media(min-width: $lg) and (max-width: $xl) {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+.boxdata_type {
+    width: 20px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
