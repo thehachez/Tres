@@ -1,17 +1,11 @@
 ﻿import * as React from 'react';
+import { PropsBoxesDataMg } from '../../../stores/maProps';
+
 import { ItemClock,
          ItemHash } from '../../svg/items';
 
-interface Props {
+interface Props extends PropsBoxesDataMg {
     key: number;
-    name: string;
-    description: string;
-    idorg: string;
-    idbranch: string;
-    idarea: string;
-    idtask: string;
-    timeta: string;
-    dateta: string;
 }
 
 export default class BoxsdataMg extends React.Component<Props, any> {
@@ -25,7 +19,7 @@ export default class BoxsdataMg extends React.Component<Props, any> {
                     <div className="boxdata_type">
                         <ItemHash />
                     </div>
-                    <p>{ this.props.description }</p>
+                    <p>{ this.props.hash }</p>
                 </li>
                 <li className="boxdatamg_li_bot">
                     <div className="boxdat_libot_div_left">

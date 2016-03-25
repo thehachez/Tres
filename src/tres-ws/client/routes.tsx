@@ -13,7 +13,7 @@ export default render((
     <Router history={ browserHistory }>
         <Route path='/' component={ App } >
             <Route path="main" component={ Main }>
-                <IndexRedirect to="/main/administration/admain" />
+                <IndexRedirect to="/main/administration/addata" />
                 <Route path="administration" component={ MainAdministration }>
                     <IndexRoute component={ AdMain }/>
                     <Route path="admain" component={ AdMain }/>

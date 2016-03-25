@@ -24,11 +24,13 @@
     @extend .col-xs-12;
     @extend .col-sm-12;
     @extend .col-md-3;
-    @extend .col-lg-3;
-    @extend .col-xl-2;
+    @extend .col-lg-1;
+    @extend .col-xl-1;
+
     @media(max-width: $sm) {
         height: 20%;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         height: 25%;
     }
@@ -43,11 +45,13 @@
     @extend .col-xs-12;
     @extend .col-sm-12;
     @extend .col-md-8;
-    @extend .col-lg-8;
-    @extend .col-xl-8;
+    @extend .col-lg-9;
+    @extend .col-xl-9;
+
     @media(max-width: $sm) {
         height: 80%;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         height: 75%;
     }
@@ -62,11 +66,13 @@
     @extend .col-xs-12;
     @extend .col-sm-12;
     @extend .col-md-1;
-    @extend .col-lg-1;
+    @extend .col-lg-2;
     @extend .col-xl-2;
+
     @media(max-width: $sm) {
         height: 0;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         height: 0;
     }
@@ -83,9 +89,11 @@
     height: 10%;
     @include collapse();
     @include make-row();
+
     @media(max-width: $sm) {
         height: 45%;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         height: 40%;
     }
@@ -98,9 +106,11 @@
     justify-content: center;
     @include collapse();
     @include make-row();
+
     @media(max-width: $sm) {
         height: 55%;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         height: 60%;
     }
@@ -111,9 +121,11 @@
     height: 5%;
     @include collapse();
     @include make-row();
+
     @media(max-width: $sm) {
         height: 0;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         height: 0;
     }
@@ -125,56 +137,67 @@
     height: 65%;
     display: flex;
     justify-content: center;
+    align-self: center;
     @include collapse();
+
     @media(max-width: $sm) {
         height: 100%;
     }
+
     @media(max-width: 731px) and (orientation: landscape) {
         height: 100%;
     }
 }
 
 .ul_po_tp_mleft {
-    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     @include collapse();
+
     li {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
+
         svg {
             width: 35%;
             fill: $poFill;
             cursor: pointer;
         }
     }
+
     li:nth-child(3) {
         svg {
             width: 30%;
         }
     }
+
     @media(max-width: $sm) {
-         width: 100%;
-         flex-direction: row;
+        width: 100%;
+        flex-direction: row;
     }
+
     @media(max-width: 731px) and (orientation:landscape) {
         flex-direction: row;
         width: 90%;
+
         li {
             svg {
                 width: 20%;
             }
         }
+
         li:nth-child(3) {
-        svg {
-            width: 18%;
+            svg {
+                width: 18%;
+            }
         }
     }
-    }
+
     @media(min-width: $lg) and (max-width: $xl) {
+        width: 100%;
         li {
             svg {
                 width: 35%;
@@ -188,15 +211,16 @@
 
 .row_prof_top_mleft {
     width: 100%;
-    height: 35%;
+    height: 200px;
     display: flex;
-    align-self: flex-end;
     justify-content: center;
     @include collapse();
+
     @media(max-width: $sm) {
         height: 0;
         display: none;
     }
+
     @media(max-width: 731px) and (orientation: landscape) {
         height: 0;
         display: none;
@@ -212,23 +236,23 @@
     li:nth-child(1) {
         height: 60%;
     }
+
     li:nth-child(2) {
         flex-direction: column;
     }
+
     li {
         width: 100%;
         height: 25%;
         display: flex;
         justify-content: center;
         align-self: center;
-        color: white;
     }
 }
 
 .img-prof {
     width: 100%;
     height: 100%;
-    background-color: $p;
     background-image: url(../images/user.jpg);
     background-size: cover;
     background-position: center center;
@@ -243,7 +267,7 @@
     height: 20px;
     border-radius: 50px;
     left: 60%;
-    top: 11%;
+    top: 15%;
     @include userCircleStatus();
 }
 
@@ -275,7 +299,7 @@
     align-self: center;
     text-transform: capitalize;
     font-size: 16px;
-    color: #80D8FF;
+    color: #9f9f9f;
 }
 
 
@@ -297,6 +321,7 @@
     height: 80%;
     @include make-row();
     @include collapse();
+
     @media(min-width: $lg) {
         height: 90%;
     }
@@ -307,6 +332,7 @@
     height: 10%;
     @include make-row();
     @include collapse();
+
     @media(min-width: $lg) {
         height: 0;
     }
@@ -356,15 +382,18 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+
     li {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
+
         svg {
             width: 60%;
             align-self: center;
         }
+
         p {
             padding-right: 15px;
             margin: 0;
@@ -372,5 +401,27 @@
             align-self: center;
         }
     }
+
+    @include collapse();
+}
+
+// user profiler
+
+.row_ma_rg_mid_childtop {
+    width: 100%;
+    height: 5%;
+    @include make-row();
+    @include collapse();
+}
+.row_ma_rg_mid_childmid {
+    width: 100%;
+    height: 85%;
+    @include make-row();
+    @include collapse();
+}
+.row_ma_rg_mid_childbot {
+    width: 100%;
+    height: 10%;
+    @include make-row();
     @include collapse();
 }
