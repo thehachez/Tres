@@ -26,7 +26,7 @@ var config = {
 };
 
 var WEBPACKCONF = {
-    devtool: 'cheap-eval-source-map',
+    devtool: 'eval',
     /*target: webworker - node - electron - async-node - node-webkit */
     target: "web",
     debug: true,

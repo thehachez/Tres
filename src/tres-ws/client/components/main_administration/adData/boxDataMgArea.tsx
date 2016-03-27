@@ -1,14 +1,13 @@
 ﻿import * as React from 'react';
-import { PropsBoxesDataMg } from '../../../stores/maProps';
+import { PropsBoxesDataMgArea } from '../../../stores/maProps';
 
-import { ItemClock,
-         ItemHash } from '../../svg/items';
+import { ItemHash } from '../../svg/items';
 
-interface Props extends PropsBoxesDataMg {
+interface Props extends PropsBoxesDataMgArea {
     key: number;
 }
 
-export default class BoxsdataMg extends React.Component<Props, any> {
+export default class BoxsdataMgArea extends React.Component<Props, any> {
     render() {
         return (
             <ul className="ul_boxsdatamg">
@@ -27,7 +26,7 @@ export default class BoxsdataMg extends React.Component<Props, any> {
                     <div className="boxdat_libot_div_right">
                         <div className="boxdat_left"></div>
                         <div className="boxdat_timeatention">
-                            <p>2:00</p>
+                            <p></p>
                         </div>
                     </div>
                 </li>

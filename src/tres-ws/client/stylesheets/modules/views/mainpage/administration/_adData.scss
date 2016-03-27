@@ -15,7 +15,6 @@
 .row_adData_top {
     width: 100%;
     height: 15%;
-    background: $bgBarIntMd;
     @include make-row();
     @include collapse();
 
@@ -40,7 +39,6 @@
 /* addata mid top */
 .col_adData_tp_left_min {
     height: 100%;
-    background: $bgColorSrMg;
     @include collapse();
     @extend .col-xs-1;
     @extend .col-sm-1;
@@ -48,9 +46,9 @@
     @extend .col-lg-1;
     @extend .col-xl-1;
 }
+
 .col_adData_tp_left {
     height: 100%;
-    background: $bgColorSrMg;
     @include collapse();
     @extend .col-xs-5;
     @extend .col-sm-5;
@@ -63,7 +61,6 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    background: $bgColorSrMg;
     border-right: 1px solid $bordersTpMid;
     @include collapse();
     @extend .col-xs-5;
@@ -167,17 +164,16 @@
         display: flex;
         justify-content: flex-end;
         border-radius: 10px;
+        padding-right: 1px;
 
         svg {
+            width: 55%;
             cursor: pointer;
+            align-self: flex-start;
         }
 
         svg:hover {
             fill: $p;
-        }
-
-        * {
-            align-self: center;
         }
     }
 }
@@ -209,6 +205,7 @@
 
     li:nth-child(2) {
         width: 30%;
+
         svg {
             width: 50% !important;
         }
@@ -247,6 +244,7 @@
     overflow: auto;
     justify-content: center;
     @include make-container();
+    @include collapse();
 
     @media(max-width: $sm) {
         @include collapse();
@@ -262,7 +260,7 @@
 }
 
 .cn_adData_mag::-webkit-scrollbar-thumb {
-    background: #f3f3f3;
+    background: $p;
 }
 
 .ul_boxsdatamg {
@@ -271,9 +269,10 @@
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 15px;
+    margin: 5px;
     cursor: pointer;
-    border: 1px solid #e9e9e9;
+    background: #FFF;
+    box-shadow: 0 5px 10px 1px rgba(233, 233, 233, 0.15);
 
     @media(max-width: 731px) and (orientation: landscape) {
         min-width: 100%;
@@ -306,74 +305,99 @@
         height: 100%;
         display: flex;
         text-transform: capitalize;
+    }
+}
 
-        p {
-            @include collapse();
-        }
+.boxdatamg_li_top {
+    padding-left: 20px;
+
+    p {
+        align-self: center;
+        font-size: 1.6em;
+        @include collapse();
+    }
+}
+
+.boxdatamg_li_mid {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    svg {
+        width: 100%;
     }
 
-    .boxdatamg_li_top {
-        padding-left: 20px;
+    p {
+        padding-left: 6px;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        margin: 0;
+        align-self: flex-start;
+        color: #cccccc;
+        font-size: 1.1em;
+    }
+}
 
-        p {
-            align-self: center;
-            font-size: 1.6em;
-        }
+.boxdatamg_li_bot {
+    flex-direction: row;
+}
+
+.boxdat_libot_div_right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    @media(max-width: 731px) and (orientation: landscape) {
+        justify-content: flex-start;
+    }
+}
+
+.boxdat_libot_div_left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boxdat_timeatention {
+    align-self: center;
+    font-size: 1.5em;
+    @include collapse();
+
+    @media(max-width: 731px) and (orientation: landscape) {
+        font-size: 1.5em;
     }
 
-    .boxdatamg_li_mid {
-        display: flex;
-        flex-direction: row;
-        padding-left: 20px;
-        svg {
-            width: 100%;
-        }
-        p {
-            padding-left: 3px !important;
-            align-self: flex-start;
-            color: #cccccc;
-        }
-    }
-
-    .boxdatamg_li_bot {
-        flex-direction: row;
-
-        .boxdat_libot_div_left {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .boxdat_libot_div_right {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-
-            @media(max-width: 731px) and (orientation: landscape) {
-                justify-content: flex-start;
-            }
-
-            .boxdat_timeatention {
-                font-family: "helvetica";
-                align-self: center;
-                font-size: 1.5em;
-
-                @media(max-width: 731px) and (orientation: landscape) {
-                    font-size: 1.5em;
-                }
-
-                @media(min-width: $lg) and (max-width: $xl) {
-                    font-size: 1.5em;
-                }
-            }
-        }
+    @media(min-width: $lg) and (max-width: $xl) {
+        font-size: 1.5em;
     }
 }
 
 .boxdata_type {
     width: 20px;
-    height: 24px;
+    height: 28px;
     display: flex;
     justify-content: center;
     align-self: flex-start;
+}
+
+.ul_topmiddlepanelmg {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    @include collapse();
+    li:nth-child(1) {
+         margin-left: 15px;
+    }
+    li {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+       
+        p {
+            align-self: center;
+            text-transform: capitalize;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+    }
 }

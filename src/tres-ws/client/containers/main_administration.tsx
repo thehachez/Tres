@@ -1,11 +1,11 @@
 ﻿import * as React from 'react';
 // PROPS INTEFACES
 import { PropStates } from '../stores/maProps';
-import { PropsBoxesDataMg } from '../stores/maProps';
+import { PropsBoxesDataMgTask } from '../stores/maProps';
 
 export interface Props {
     children: any;
-    dataMg: Array<PropsBoxesDataMg>;
+    dataMg: Array<PropsBoxesDataMgTask>;
 }
 
 export class MainAdministration extends React.Component<Props, any> {

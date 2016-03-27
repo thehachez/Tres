@@ -1,14 +1,14 @@
 ﻿import * as React from 'react';
 // PROPS INTEFACES
 import { PropStates } from '../stores/maProps';
-import { PropsBoxesDataMg } from '../stores/maProps';
+import { PropsBoxesDataMgTask } from '../stores/maProps';
 // COMPONENTS
 import { UserProfiler } from '../components/main/userProfiler';
 import { PaOptions } from '../components/main/paOptions';
 
 interface Props {
     children: any;
-    dataMg: Array<PropsBoxesDataMg>;
+    dataMg: Array<PropsBoxesDataMgTask>;
 }
 
 export class Main extends React.Component<Props, any> {
@@ -58,7 +58,9 @@ export class Main extends React.Component<Props, any> {
                         <div className="row_ma_rg_mid">
                             <div className="row_ma_rg_mid_childtop" />
                             <div className="row_ma_rg_mid_childmid">
-                                <UserProfiler userStatus="user-status-on"/>
+                                {/*
+                                  <UserProfiler userStatus="user-status-on"/>
+                                */}
                             </div>
                             <div className="row_ma_rg_mid_childbot" />
                         </div>

@@ -1,11 +1,14 @@
 ﻿import Alt from '../alt';
+import AdActions from '../actions/maActions';
 import { MaHandlers } from './maHandlers';
 import { PropStates } from './maProps';
-import AdActions from '../actions/maActions';
+import { PropsBoxesDataMgTask, PropsBoxesDataMgArea } from './maProps';
+
+type StoreHandler = (state: string | number)=> void;
 
 export interface HanderlsDef extends AltJS.ActionsBind {
     // Set handlers listeners of actions referente to maHandlers.
-    handlerTest: (prop: string) => void;
+    handlerGoToMgData: (dataMg: Array<PropsBoxesDataMgTask | PropsBoxesDataMgArea>) => void;
 }
 
 export class Store extends MaHandlers implements AltJS.StoreModel<any> {
@@ -18,7 +21,7 @@ export class Store extends MaHandlers implements AltJS.StoreModel<any> {
         super();
         this.bindListeners(
             {
-                handlerTest: AdActions.GO_TO_MAIN_BOXES
+                handlerGoToMgData: AdActions.GO_TO_MG_DATA
             }
         );
     }

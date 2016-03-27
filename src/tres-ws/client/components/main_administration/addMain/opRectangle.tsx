@@ -35,9 +35,7 @@ export default class OpRectangle extends React.Component<Props, any> {
         }
 
         return (
-            <div className="ul_op_rectangle_inset"  onClick={
-                () => Actions.goToMainBoxes(this.props.location, this.props.history)
-            }>
+            <div className="ul_op_rectangle_inset">
                 <ul className="ul_op_rectangle">
                     <li>
                         {

@@ -33,7 +33,7 @@ $dfcolor: #546E7A;
 
 // svg
 $svgSize: 50% !default;
-$svgFill: #cccccc;
+$svgFill: #bababa;
 
 // searchmg
 $bgColorSrMg: #FFF;
@@ -51,6 +51,7 @@ body {
     color: $dfcolor;
     margin: 0 !important;
     padding: 0 !important;
+    background: #f7f7f7;
 }
 
 *:focus {
