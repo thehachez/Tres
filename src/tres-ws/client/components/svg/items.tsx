@@ -1,5 +1,19 @@
 ﻿import * as React from 'react';
 
+// TASKS TYPES ICONS
+export class ItemTaskHot extends React.Component<any, any> {
+    render() {
+        return (
+            <svg x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
+                <path fill="#DD2C00" d="M39,28c0,8.395-6.606,15-15.001,15S9,36.395,9,28S22.479,12.6,20.959,5C24,5,39,15.841,39,28z" />
+                <path fill="#FF5722" d="M33,32c0-7.599-9-15-9-15c0,6.08-9,8.921-9,15c0,5.036,3.963,9,9,9S33,37.036,33,32z" />
+                <path fill="#FFC107" d="M18.999,35.406C19,32,24,30.051,24,27c0,0,4.999,3.832,4.999,8.406c0,2.525-2.237,4.574-5,4.574S18.998, 37.932, 18.999, 35.406z" />
+            </svg>
+        )
+    }
+}
+
+
 export class ItemViewInFile extends React.Component<any, any> {
     render() {
         return (
@@ -14,7 +28,7 @@ export class ItemViewInFile extends React.Component<any, any> {
 export class ItemHash extends React.Component<any, any> {
     render() {
         return (
-            <svg enable-background="new 0 0 48 48" viewBox="0 0 48 48" x="0px" y="0px" version="1.1">
+            <svg enable-background="new 0 0 48 48" viewBox="0 0 48 48" x="0px" y="0px">
                 <g>
                     <rect fill="#64DD17" x={6} y={28} width={36} height={6} />
                     <rect fill="#64DD17" x={6} y={14} width={36} height={6} />

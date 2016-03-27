@@ -5,7 +5,7 @@ var gulpSass = require('gulp-sass');
 var gulpNotify = require('gulp-notify');
 var gulpRename = require("gulp-rename");
 var webpack = require("webpack");
-var gulpWwebpack = require("webpack-stream");
+var gulpWebpack = require("webpack-stream");
 var browserSync = require('browser-sync').create();
 var path = require("path");
 var node_modules = path.resolve(__dirname, 'node_modules');
@@ -74,9 +74,9 @@ gulp.task('init', function () {
 
 gulp.task("webpack", function (done) {
     return gulp.src('./client/main.tsx')
-   .pipe(gulpWwebpack(WEBPACKCONF, webpack, function (err, stats) {
+   .pipe(gulpWebpack(WEBPACKCONF, webpack, function (err, stats) {
        if (err)
-           gutil.PluginError("webpack-dev-server", err);
+           gutil.log("webpack-dev-server", err);
     
        Object.keys(stats.compilation.assets).forEach(function (key) {
            gutil.log('Webpack: output: ', gutil.colors.green(key));

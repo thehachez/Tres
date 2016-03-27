@@ -1005,11 +1005,11 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-lg-1, .col_ma_left, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
+  .col-lg-1, .col_ma_right, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
     flex: 0 0 8.33333%; }
-  .col-lg-2 {
+  .col-lg-2, .col_ma_left {
     flex: 0 0 16.66667%; }
-  .col-lg-3, .col_ma_right {
+  .col-lg-3 {
     flex: 0 0 25%; }
   .col-lg-4 {
     flex: 0 0 33.33333%; }
@@ -1019,9 +1019,9 @@ pre {
     flex: 0 0 50%; }
   .col-lg-7 {
     flex: 0 0 58.33333%; }
-  .col-lg-8, .col_ma_mid {
+  .col-lg-8 {
     flex: 0 0 66.66667%; }
-  .col-lg-9 {
+  .col-lg-9, .col_ma_mid {
     flex: 0 0 75%; }
   .col-lg-10, .col_adData_md_mid {
     flex: 0 0 83.33333%; }
@@ -4892,7 +4892,7 @@ textarea::-webkit-input-placeholder {
         width: 18%; } }
   @media (min-width: 992px) and (max-width: 1200px) {
     .ul_po_tp_mleft {
-      width: 100%; }
+      width: 75%; }
       .ul_po_tp_mleft li svg {
         width: 35%; } }
 
@@ -5234,7 +5234,8 @@ textarea::-webkit-input-placeholder {
       justify-content: center; } }
   @media (min-width: 992px) and (max-width: 1200px) {
     .cn_panel_datamg {
-      width: 80%; } }
+      width: 100%;
+      height: 50%; } }
 
 .ul_panel_datamg_items {
   width: 100%;
@@ -5335,14 +5336,17 @@ textarea::-webkit-input-placeholder {
   flex-direction: column;
   padding: 0;
   margin: 5px;
+  margin-bottom: 10px;
+  margin-top: 0;
   cursor: pointer;
   background: #FFF;
-  box-shadow: 0 5px 10px 1px rgba(233, 233, 233, 0.15); }
+  box-shadow: 0 5px 10px 1px rgba(233, 233, 233, 0.15);
+  border: 1px solid rgba(51, 51, 51, 0.14); }
   @media (max-width: 731px) and (orientation: landscape) {
     .ul_boxsdatamg {
       min-width: 100%;
       height: 65%;
-      margin: 0px;
+      margin: 0;
       border-top: 0;
       border-bottom: 1px solid #e0e6ea;
       border-left: 0;
@@ -5350,8 +5354,7 @@ textarea::-webkit-input-placeholder {
   @media (min-width: 992px) and (max-width: 1200px) {
     .ul_boxsdatamg {
       min-width: 44%;
-      height: 34%;
-      margin: 10px; } }
+      height: 34%; } }
   @media (max-width: 544px) {
     .ul_boxsdatamg {
       min-width: 100%;
@@ -5388,8 +5391,7 @@ textarea::-webkit-input-placeholder {
     padding-top: 0;
     margin: 0;
     align-self: flex-start;
-    color: #cccccc;
-    font-size: 1.1em; }
+    font-size: 2em; }
 
 .boxdatamg_li_bot {
   flex-direction: row; }
@@ -5404,27 +5406,40 @@ textarea::-webkit-input-placeholder {
 
 .boxdat_libot_div_left {
   width: 100%;
+  display: flex; }
+  .boxdat_libot_div_left p {
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    color: #cccccc;
+    font-size: 17px; }
+
+.cn_boxdata_type {
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  align-self: flex-end; }
+
+.boxdata_type {
+  width: 20px;
+  height: 24px;
   display: flex;
   justify-content: center; }
+  .boxdata_type svg {
+    width: 100%; }
 
 .boxdat_timeatention {
   align-self: center;
   font-size: 1.5em;
   margin: 0px !important;
-  padding: 0px !important; }
+  padding: 0px !important;
+  font-family: Arial, Helvetica, sans-serif; }
   @media (max-width: 731px) and (orientation: landscape) {
     .boxdat_timeatention {
       font-size: 1.5em; } }
   @media (min-width: 992px) and (max-width: 1200px) {
     .boxdat_timeatention {
       font-size: 1.5em; } }
-
-.boxdata_type {
-  width: 20px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-self: flex-start; }
 
 .ul_topmiddlepanelmg {
   width: 60%;

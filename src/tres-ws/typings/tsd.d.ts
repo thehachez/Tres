@@ -6,6 +6,8 @@
 /// <reference path="alt/alt.d.ts" />
 /// <reference path="ramda/ramda.d.ts" />
 /// <reference path="whatwg-fetch/whatwg-fetch" />
+/// <reference path="tres/tres" />
+
 
 
 

@@ -1,10 +1,6 @@
 ﻿import * as React from 'react';
 import { Actions } from '../../actions/maActions';
 
-// PROPS INTERFACES
-import { PropsBoxesDataMgTask } from '../../stores/maProps';
-import { PropsBoxesDataMgArea } from '../../stores/maProps';
-
 // COMPONENTS
 import PanelDataMg from './adData/panelDataMg';
 import SearchMg from './adData/searchMg';
@@ -12,11 +8,12 @@ import TopMiddlePanelMg from './adData/topmiddlepanelmg';
 import Spinner from '../default/spinner';
 
 // BOXES OF DATA 
-import BoxsdataMgTask from './adData/boxdataMgTask';
 import BoxsdataMgArea from './adData/boxdataMgArea';
+import BoxsdataMgTask from './adData/boxdataMgTask';
 
 interface Props {
-    dataMg: Array<PropsBoxesDataMgArea | PropsBoxesDataMgTask>;
+    dataMg: Array<Tres.DataMgArea
+    | Tres.DataMgTask>;
 }
 
 export class AdData extends React.Component<Props, any> {
@@ -27,9 +24,8 @@ export class AdData extends React.Component<Props, any> {
 
     render() {
         function INJECTBOXES(self: AdData) {
-            console.log(self.props.dataMg)
             if (Actions._gotoMgDataState_ === "mgDataArea") {
-                return self.props.dataMg.map((element: PropsBoxesDataMgArea, key: number) => {
+                return self.props.dataMg.map((element: Tres.DataMgArea, key: number) => {
                     return (<BoxsdataMgArea
                         idorg={ element.idorg }
                         idbranch={ element.idbranch }
@@ -42,16 +38,16 @@ export class AdData extends React.Component<Props, any> {
                 });
             }
             else if (Actions._gotoMgDataState_ === "mgDataTask") {
-                return self.props.dataMg.map((element: PropsBoxesDataMgTask, key: number) => {
+                return self.props.dataMg.map((element: Tres.DataMgTask, key: number) => {
                     return (<BoxsdataMgTask
                         idorg={ element.idorg }
                         idbranch={ element.idbranch }
                         idarea={ element.idarea }
                         idtask={ element.idtask }
+                        type={ element.type }
                         name={ element.name }
                         hash= { element.hash }
                         timeta={ element.timeta }
-                        datata={ element.datata }
 
                         key={ key }
                         />)

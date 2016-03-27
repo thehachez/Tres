@@ -1,6 +1,4 @@
-﻿import { PropsBoxesDataMgArea, PropsBoxesDataMgTask } from '../stores/maProps';
-
-interface RequestConstructor {
+﻿interface RequestConstructor {
     method: string;
     request: string;
     mode?: string;
@@ -40,7 +38,7 @@ export class MaServices {
 
     fetcher(request: RequestConstructor): Promise<Response> {
         var reqConstructor: any = {},
-        promise;
+        promise: Promise<Response>;
         // set defaut request props.
         request.controller = (request.controller !== undefined)
             ? "/" + request.controller

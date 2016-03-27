@@ -1,14 +1,12 @@
 ﻿import * as React from 'react';
-// PROPS INTEFACES
-import { PropStates } from '../stores/maProps';
-import { PropsBoxesDataMgTask } from '../stores/maProps';
+
 // COMPONENTS
 import { UserProfiler } from '../components/main/userProfiler';
 import { PaOptions } from '../components/main/paOptions';
 
 interface Props {
     children: any;
-    dataMg: Array<PropsBoxesDataMgTask>;
+    dataMg: Array<Tres.DataMgTask>;
 }
 
 export class Main extends React.Component<Props, any> {

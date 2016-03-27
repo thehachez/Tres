@@ -1,10 +1,8 @@
 ﻿import Alt from '../alt';
-import * as Tres from '../core/tresCore';
 import MaServices from '../services/maServices';
-import { PropsBoxesDataMgTask, PropsBoxesDataMgArea } from '../stores/maProps';
 
 interface IntMaActionsUpper extends AltJS.Action<any> {
-    GO_TO_MG_DATA(dataMg: Array<PropsBoxesDataMgArea | PropsBoxesDataMgTask> | number): void;
+    GO_TO_MG_DATA(dataMg: Array<Tres.DataMgArea | Tres.DataMgTask> | string | number): void;
 }
 
 interface IntMaActions {
@@ -22,7 +20,7 @@ class MaActions implements AltJS.ActionsClass, IntMaActions {
     // components states
     _gotoMgDataState_: string;
 
-    goToMgData(state: string, wait?: string): any {
+    goToMgData(state: string, wait?: string):  Function | string | number {
         if (this._gotoMgDataState_ === state) return 0;
         if (wait) return "wait";
        
