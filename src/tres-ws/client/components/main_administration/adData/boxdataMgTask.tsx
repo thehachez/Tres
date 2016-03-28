@@ -1,5 +1,7 @@
 ﻿import * as React from 'react';
 import { ItemTaskHot,
+    ItemTaskFast,
+    ItemTaskStandar,
     ItemHash } from '../../svg/items';
 
 interface Props extends Tres.DataMgTask {
@@ -8,6 +10,21 @@ interface Props extends Tres.DataMgTask {
 
 export default class BoxsdataMg extends React.Component<Props, any> {
     render() {
+        var typeTask: string;
+        function TYPEASSIGNMENT(self: BoxsdataMg, type: string) {
+            switch (type) {
+                case "hottask":
+                    typeTask = "hot";
+                    return <ItemTaskHot />
+                case "fasttask":
+                    typeTask = "rapido";
+                    return <ItemTaskFast />
+                default:
+                    typeTask = "normal";
+                    return <ItemTaskStandar />
+            }
+        }
+
         return (
             <ul className="ul_boxsdatamg">
                 <li className="boxdatamg_li_top">
@@ -17,17 +34,23 @@ export default class BoxsdataMg extends React.Component<Props, any> {
                 </li>
                 <li className="boxdatamg_li_bot">
                     <div className="boxdat_libot_div_left">
-                        <div className="cn_boxdata_type">
-                            <div className="boxdata_type">
+                        <div className="cn_boxdata">
+                            <div className="boxdata_hash">
                                 <ItemHash />
                             </div>
                             <p>{ this.props.hash }</p>
                         </div>
-                        <div className="cn_boxdata_type">
+                        <div className="cn_boxdata">
                             <div className="boxdata_type">
-                                <ItemTaskHot />
+                                { 
+                                    TYPEASSIGNMENT(this, this.props.type) 
+                                } 
                             </div>
-                            <p>{ this.props.type }</p>
+                            <p>
+                                { 
+                                  typeTask 
+                                }
+                            </p>
                         </div>
                     </div>
                     <div className="boxdat_libot_div_right">

@@ -16,10 +16,12 @@ export default class BoxsdataMgArea extends React.Component<Props, any> {
                 </li>
                 <li className="boxdatamg_li_bot">
                     <div className="boxdat_libot_div_left">
-                        <div className="boxdata_type">
-                            <ItemHash />
+                        <div className="cn_boxdata">
+                            <div className="boxdata_hash">
+                                <ItemHash />
+                            </div>
+                            <p>{ this.props.hash }</p>
                         </div>
-                        <p>{ this.props.hash }</p>
                     </div>
                     <div className="boxdat_libot_div_right">
                         <div className="boxdat_left"></div>

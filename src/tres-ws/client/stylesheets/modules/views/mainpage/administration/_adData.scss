@@ -45,6 +45,10 @@
     @extend .col-md-1;
     @extend .col-lg-1;
     @extend .col-xl-1;
+
+    @media(max-width: $sm) {
+        display: none;
+    }
 }
 
 .col_adData_tp_left {
@@ -63,8 +67,8 @@
     justify-content: flex-end;
     border-right: 1px solid $bordersTpMid;
     @include collapse();
-    @extend .col-xs-5;
-    @extend .col-sm-5;
+    @extend .col-xs-7;
+    @extend .col-sm-7;
     @extend .col-md-5;
     @extend .col-lg-5;
     @extend .col-xl-5;
@@ -74,7 +78,7 @@
     height: 100%;
     @include collapse();
     @extend .col-xs-0;
-    @extend .col-sm-1;
+    @extend .col-sm-0;
     @extend .col-md-1;
     @extend .col-lg-1;
     @extend .col-xl-1;
@@ -85,11 +89,15 @@
 .col_adData_md_left {
     height: 100%;
     @include collapse();
-    @extend .col-xs-1;
-    @extend .col-sm-1;
+    @extend .col-xs-12;
+    @extend .col-sm-12;
     @extend .col-md-1;
     @extend .col-lg-1;
     @extend .col-xl-1;
+
+    @media(max-width: $sm) {
+        display: none;
+    }
 }
 
 .col_adData_md_mid {
@@ -109,8 +117,8 @@
     display: flex;
     justify-content: center;
     @include collapse();
-    @extend .col-xs-1;
-    @extend .col-sm-1;
+    @extend .col-xs-2;
+    @extend .col-sm-2;
     @extend .col-md-1;
     @extend .col-lg-1;
     @extend .col-xl-1;
@@ -176,6 +184,10 @@
         svg:hover {
             fill: $p;
         }
+
+        @media(max-width: $sm) {
+            justify-content: center;
+        }
     }
 }
 
@@ -230,6 +242,10 @@
             font-size: 25px;
             border: none;
             background: transparent;
+
+            @media(max-width: $sm) {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -254,6 +270,10 @@
 
 .cn_adData_mag::-webkit-scrollbar {
     width: 18px;
+
+    @media(max-width: $sm) {
+        width: 0;
+    }
 }
 
 .cn_adData_mag::-webkit-scrollbar-track {
@@ -288,19 +308,21 @@
         border-right: 0;
     }
 
-    @media(min-width: $lg) and (max-width: $xl) {
-        min-width: 44%;
-        height: 34%;
-    }
-
     @media(max-width: $sm) {
         min-width: 100%;
-        margin: 0px;
-        margin-bottom: 25px;
+    height: auto;
+
+        margin: 0;
+        margin-bottom: 1px;
         border-top: 0;
         border-bottom: 1px solid #e0e6ea;
         border-left: 0;
         border-right: 0;
+    }
+
+    @media(min-width: $lg) and (max-width: $xl) {
+        min-width: 44%;
+        height: 34%;
     }
 
     li {
@@ -358,36 +380,52 @@
 .boxdat_libot_div_left {
     width: 100%;
     display: flex;
+
     p {
         padding: 0;
         margin: 0;
         margin-left: 5px;
         color: #cccccc;
-        font-size: 17px;
+        font-size: 15px;
     }
 }
-.cn_boxdata_type {
+
+.cn_boxdata {
     display: flex;
     margin-bottom: 15px;
     margin-left: 15px;
     align-self: flex-end;
-
 }
-.boxdata_type {
+
+.boxdata_hash {
     width: 20px;
     height: 24px;
     display: flex;
     justify-content: center;
+
+    svg {
+        width: 90%;
+    }
+}
+
+.boxdata_type {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+
     svg {
         width: 100%;
     }
 }
+
 
 .boxdat_timeatention {
     align-self: center;
     font-size: 1.5em;
     @include collapse();
     font-family: Arial, Helvetica, sans-serif;
+
     @media(max-width: 731px) and (orientation: landscape) {
         font-size: 1.5em;
     }
@@ -405,6 +443,10 @@
 
     li:nth-child(1) {
         margin-left: 15px;
+
+        @media(max-width: $sm) {
+            margin-left: 0px;
+        }
     }
 
     li {
@@ -417,6 +459,11 @@
             text-transform: capitalize;
             font-size: 1.1em;
             cursor: pointer;
+            @include collapse();
         }
+    }
+
+    @media(max-width: $sm) {
+        width: 100%;
     }
 }

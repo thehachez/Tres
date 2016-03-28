@@ -314,6 +314,10 @@
     border-bottom: 1px solid $bgBarT;
     @include make-row();
     @include collapse();
+
+     @media(max-width: $sm) {
+        display: none;
+    }
 }
 
 .row_ma_mid_mid {
@@ -323,6 +327,9 @@
     @include collapse();
 
     @media(min-width: $lg) {
+        height: 90%;
+    }
+     @media(max-width: $sm) {
         height: 90%;
     }
 }
