@@ -3,6 +3,8 @@
 // COMPONENTS
 import { UserProfiler } from '../components/main/userProfiler';
 import { PaOptions } from '../components/main/paOptions';
+import PanelDataMg from '../components/main_administration/adData/panelDataMg';
+
 
 interface Props {
     children: any;
@@ -13,6 +15,21 @@ export class Main extends React.Component<Props, any> {
     render() {
         return (
             <div className="cn_main">
+
+                <div className="row_footer_fixed">
+                   <div className="col_fotfixed_left"></div>
+                   <div className="col_fotfixed_mid">
+                      <div className="col_chid_ffix_left"></div>
+                      <div className="col_chid_ffix_mid">
+                            
+                        <PanelDataMg />
+
+                            </div>
+                      <div className="col_chid_ffix_right"></div>
+                  </div>
+                   <div className="col_fotfixed_right"></div>
+                </div>
+
                 <div className="row_main">
                     <div className="col_ma_left">
 
@@ -41,12 +58,6 @@ export class Main extends React.Component<Props, any> {
                         </div>
 
                         <div className="row_ma_mid_bot">
-                            {/*
-                            * COMPONENT
-                            * FOR HELP USERS
-                            * <Helper />
-                            */}
-
                         </div>
 
                     </div>

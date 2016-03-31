@@ -14,6 +14,116 @@
     @include collapse();
 }
 
+// FOOTER FIXED
+
+.row_footer_fixed {
+      width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    @include make-row();
+    @include collapse();
+}
+.col_fotfixed_left {
+    height: 100%;
+    background: $poBackground;
+    @include collapse();
+    @extend .col-xs-12;
+    @extend .col-sm-12;
+    @extend .col-md-1;
+    @extend .col-lg-2;
+    @extend .col-xl-1;
+
+    @media(max-width: $sm) {
+        height: 20%;
+    }
+
+    @media(max-width: 731px) and (orientation:landscape) {
+        height: 25%;
+    }
+}
+
+.col_fotfixed_mid {
+    height: 100%;
+    display: flex;
+    @include collapse();
+    @extend .col-xs-12;
+    @extend .col-sm-12;
+    @extend .col-md-8;
+    @extend .col-lg-9;
+    @extend .col-xl-9;
+
+    @media(max-width: $sm) {
+        height: 80%;
+    }
+
+    @media(max-width: 731px) and (orientation:landscape) {
+        height: 75%;
+    }
+}
+
+.col_fotfixed_right {
+    height: 100%;
+    @include collapse();
+    @extend .col-xs-12;
+    @extend .col-sm-12;
+    @extend .col-md-3;
+    @extend .col-lg-1;
+    @extend .col-xl-2;
+
+    @media(max-width: $sm) {
+        height: 0;
+    }
+
+    @media(max-width: 731px) and (orientation:landscape) {
+        height: 0;
+    }
+}
+
+.col_chid_ffix_left {
+    height: 100%;
+    @include collapse();
+    @extend .col-xs-12;
+    @extend .col-sm-12;
+    @extend .col-md-1;
+    @extend .col-lg-1;
+    @extend .col-xl-1;
+
+    @media(max-width: $sm) {
+        display: none;
+    }
+}
+
+.col_chid_ffix_mid {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: flex-end;
+    @include collapse();
+    @extend .col-xs-10;
+    @extend .col-sm-10;
+    @extend .col-md-10;
+    @extend .col-lg-10;
+    @extend .col-xl-10;
+}
+
+.col_chid_ffix_right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    @include collapse();
+    @extend .col-xs-2;
+    @extend .col-sm-2;
+    @extend .col-md-1;
+    @extend .col-lg-1;
+    @extend .col-xl-1;
+}
+
+
+/////////////////
+
+
 //  SECTION LEFT
 //
 ///
@@ -46,7 +156,7 @@
     @extend .col-sm-12;
     @extend .col-md-8;
     @extend .col-lg-9;
-    @extend .col-xl-8;
+    @extend .col-xl-9;
 
     @media(max-width: $sm) {
         height: 80%;
@@ -67,7 +177,7 @@
     @extend .col-sm-12;
     @extend .col-md-3;
     @extend .col-lg-1;
-    @extend .col-xl-3;
+    @extend .col-xl-2;
 
     @media(max-width: $sm) {
         height: 0;

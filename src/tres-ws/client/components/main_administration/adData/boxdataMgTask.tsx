@@ -2,6 +2,7 @@
 import { ItemTaskHot,
     ItemTaskFast,
     ItemTaskStandar,
+    ItemTaskSlow,
     ItemHash } from '../../svg/items';
 
 interface Props extends Tres.DataMgTask {
@@ -19,6 +20,9 @@ export default class BoxsdataMg extends React.Component<Props, any> {
                 case "fasttask":
                     typeTask = "rapido";
                     return <ItemTaskFast />
+                case "slowtask":
+                    typeTask = "lento"
+                    return <ItemTaskSlow />
                 default:
                     typeTask = "normal";
                     return <ItemTaskStandar />
@@ -31,6 +35,7 @@ export default class BoxsdataMg extends React.Component<Props, any> {
                     <p>{ this.props.name }</p>
                 </li>
                 <li className ="boxdatamg_li_mid">
+                     <p>{  this.props.timeta }</p>
                 </li>
                 <li className="boxdatamg_li_bot">
                     <div className="boxdat_libot_div_left">
@@ -51,13 +56,6 @@ export default class BoxsdataMg extends React.Component<Props, any> {
                                   typeTask 
                                 }
                             </p>
-                        </div>
-                    </div>
-                    <div className="boxdat_libot_div_right">
-                        <div className="boxdat_left">
-                        </div>
-                        <div className="boxdat_timeatention">
-                            <p>{ this.props.timeta }</p>
                         </div>
                     </div>
                 </li>

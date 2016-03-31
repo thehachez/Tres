@@ -2,7 +2,6 @@
 import { Actions } from '../../actions/maActions';
 
 // COMPONENTS
-import PanelDataMg from './adData/panelDataMg';
 import SearchMg from './adData/searchMg';
 import TopMiddlePanelMg from './adData/topmiddlepanelmg';
 import Spinner from '../default/spinner';
@@ -27,12 +26,10 @@ export class AdData extends React.Component<Props, any> {
             if (Actions._gotoMgDataState_ === "mgDataArea") {
                 return self.props.dataMg.map((element: Tres.DataMgArea, key: number) => {
                     return (<BoxsdataMgArea
-                        idorg={ element.idorg }
-                        idbranch={ element.idbranch }
                         idarea={ element.idarea }
                         name={ element.name }
                         hash= { element.hash }
-
+                        type= { element.type }
                         key={ key }
                         />)
                 });
@@ -40,13 +37,10 @@ export class AdData extends React.Component<Props, any> {
             else if (Actions._gotoMgDataState_ === "mgDataTask") {
                 return self.props.dataMg.map((element: Tres.DataMgTask, key: number) => {
                     return (<BoxsdataMgTask
-                        idorg={ element.idorg }
-                        idbranch={ element.idbranch }
-                        idarea={ element.idarea }
                         idtask={ element.idtask }
-                        type={ element.type }
                         name={ element.name }
                         hash= { element.hash }
+                        type={ element.type }
                         timeta={ element.timeta }
 
                         key={ key }
@@ -83,11 +77,6 @@ export class AdData extends React.Component<Props, any> {
                         </div>
                     </div>
                     <div className="col_adData_md_right">
-                        {/*
-                          * ITEM GROUP FOR MANAGEMENT THE DATA
-                          */}
-                        <PanelDataMg />
-
                     </div>
                 </div>
             </section>

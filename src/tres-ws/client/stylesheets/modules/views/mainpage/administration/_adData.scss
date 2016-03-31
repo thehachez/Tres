@@ -122,10 +122,6 @@
     @extend .col-md-1;
     @extend .col-lg-1;
     @extend .col-xl-1;
-
-    @media(min-width: $lg) and (max-width: $xl) {
-        justify-content: flex-end;
-    }
 }
 
 // components
@@ -133,23 +129,19 @@
 /* panel data management */
 
 .cn_panel_datamg {
-    height: 70%;
+    width: 35%;
+    height: 100%;
     display: flex;
-    justify-content: flex-end;
-
+    background: #FFF;
+    box-shadow: 0 0 10px #e0e6ea, -1px 20px 40px #e9eef1;
+    
     @media(max-width: 731px) and (orientation: landscape) {
-        height: 100%;
     }
 
     @media(max-width: $sm) {
-        width: 100%;
-        height: auto;
-        justify-content: center;
     }
 
     @media(min-width: $lg) and (max-width: $xl) {
-        width: 100%;
-        height: 50%;
     }
 }
 
@@ -157,13 +149,6 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-
-    @media(max-width: $sm) {
-        flex-direction: row;
-        align-self: center;
-        width: 80%;
-    }
 
     @include collapse();
 
@@ -171,14 +156,14 @@
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         border-radius: 10px;
         padding-right: 1px;
 
         svg {
             width: 55%;
             cursor: pointer;
-            align-self: flex-start;
+            align-self: center;
         }
 
         svg:hover {
@@ -186,7 +171,6 @@
         }
 
         @media(max-width: $sm) {
-            justify-content: center;
         }
     }
 }
@@ -259,7 +243,6 @@
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
-    justify-content: center;
     @include make-container();
     @include collapse();
 
@@ -285,7 +268,7 @@
 }
 
 .ul_boxsdatamg {
-    min-width: 45%;
+    min-width: 32%;
     height: 42%;
     display: flex;
     flex-direction: column;
@@ -348,18 +331,13 @@
     flex-direction: row;
     padding-left: 20px;
 
-    svg {
-        width: 100%;
-    }
-
     p {
-        padding-left: 6px;
-        padding-right: 0;
-        padding-bottom: 0;
-        padding-top: 0;
+        padding: 0;
         margin: 0;
         align-self: flex-start;
-        font-size: 2em;
+        font-size: 1.1em;
+        color: #ccc;
+        font-family: Helvetica, Arial, sans-serif;
     }
 }
 
@@ -416,22 +394,6 @@
 
     svg {
         width: 100%;
-    }
-}
-
-
-.boxdat_timeatention {
-    align-self: center;
-    font-size: 1.5em;
-    @include collapse();
-    font-family: Arial, Helvetica, sans-serif;
-
-    @media(max-width: 731px) and (orientation: landscape) {
-        font-size: 1.5em;
-    }
-
-    @media(min-width: $lg) and (max-width: $xl) {
-        font-size: 1.5em;
     }
 }
 

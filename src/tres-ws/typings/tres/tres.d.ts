@@ -6,22 +6,18 @@ declare module Tres {
     export interface DataMgArea {
         /* @dataMg area */
         // Props for components boxes of management data: task areas 
+        idarea: string;
         name: string;
         hash: string;
-        idorg: string;
-        idbranch: string;
-        idarea: string;
+        type: string;
     }
 
     export interface DataMgTask {
         /* @dataMg task */
         // Props for components boxes of management data: task areas 
+        idtask: string;
         name: string;
         hash: string;
-        idorg: string;
-        idbranch: string;
-        idarea: string;
-        idtask: string;
         type: string;
         timeta: string;
     }

@@ -637,7 +637,7 @@ pre {
   margin-left: -0.9375rem;
   margin-right: -0.9375rem; }
 
-.col-xs-1, .col_adData_tp_left_min, .col-xs-2, .col_adData_md_right, .col-xs-3, .col-xs-4, .col-xs-5, .col_adData_tp_left, .col-xs-6, .col-xs-7, .col_adData_tp_mid, .col-xs-8, .col-xs-9, .col-xs-10, .col_adData_md_mid, .col-xs-11, .col-xs-12, .col_ma_left, .col_ma_mid, .col_ma_right, .col_administration, .col_adData_md_left, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col_adData_tp_right, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col_adData_tp_left_min, .col-xs-2, .col_chid_ffix_right, .col_adData_md_right, .col-xs-3, .col-xs-4, .col-xs-5, .col_adData_tp_left, .col-xs-6, .col-xs-7, .col_adData_tp_mid, .col-xs-8, .col-xs-9, .col-xs-10, .col_chid_ffix_mid, .col_adData_md_mid, .col-xs-11, .col-xs-12, .col_fotfixed_left, .col_fotfixed_mid, .col_fotfixed_right, .col_chid_ffix_left, .col_ma_left, .col_ma_mid, .col_ma_right, .col_administration, .col_adData_md_left, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col_adData_tp_right, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-left: 0.9375rem;
@@ -646,7 +646,7 @@ pre {
 .col-xs-1, .col_adData_tp_left_min {
   flex: 0 0 8.33333%; }
 
-.col-xs-2, .col_adData_md_right {
+.col-xs-2, .col_chid_ffix_right, .col_adData_md_right {
   flex: 0 0 16.66667%; }
 
 .col-xs-3 {
@@ -670,13 +670,13 @@ pre {
 .col-xs-9 {
   flex: 0 0 75%; }
 
-.col-xs-10, .col_adData_md_mid {
+.col-xs-10, .col_chid_ffix_mid, .col_adData_md_mid {
   flex: 0 0 83.33333%; }
 
 .col-xs-11 {
   flex: 0 0 91.66667%; }
 
-.col-xs-12, .col_ma_left, .col_ma_mid, .col_ma_right, .col_administration, .col_adData_md_left {
+.col-xs-12, .col_fotfixed_left, .col_fotfixed_mid, .col_fotfixed_right, .col_chid_ffix_left, .col_ma_left, .col_ma_mid, .col_ma_right, .col_administration, .col_adData_md_left {
   flex: 0 0 100%; }
 
 .col-xs-pull-0 {
@@ -799,7 +799,7 @@ pre {
 @media (min-width: 544px) {
   .col-sm-1, .col_adData_tp_left_min {
     flex: 0 0 8.33333%; }
-  .col-sm-2, .col_adData_md_right {
+  .col-sm-2, .col_chid_ffix_right, .col_adData_md_right {
     flex: 0 0 16.66667%; }
   .col-sm-3 {
     flex: 0 0 25%; }
@@ -815,11 +815,11 @@ pre {
     flex: 0 0 66.66667%; }
   .col-sm-9 {
     flex: 0 0 75%; }
-  .col-sm-10, .col_adData_md_mid {
+  .col-sm-10, .col_chid_ffix_mid, .col_adData_md_mid {
     flex: 0 0 83.33333%; }
   .col-sm-11 {
     flex: 0 0 91.66667%; }
-  .col-sm-12, .col_ma_left, .col_ma_mid, .col_ma_right, .col_administration, .col_adData_md_left {
+  .col-sm-12, .col_fotfixed_left, .col_fotfixed_mid, .col_fotfixed_right, .col_chid_ffix_left, .col_ma_left, .col_ma_mid, .col_ma_right, .col_administration, .col_adData_md_left {
     flex: 0 0 100%; }
   .col-sm-pull-0 {
     right: auto; }
@@ -901,11 +901,11 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 768px) {
-  .col-md-1, .col_ma_left, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
+  .col-md-1, .col_fotfixed_left, .col_chid_ffix_left, .col_chid_ffix_right, .col_ma_left, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
     flex: 0 0 8.33333%; }
   .col-md-2 {
     flex: 0 0 16.66667%; }
-  .col-md-3, .col_ma_right {
+  .col-md-3, .col_fotfixed_right, .col_ma_right {
     flex: 0 0 25%; }
   .col-md-4 {
     flex: 0 0 33.33333%; }
@@ -915,11 +915,11 @@ pre {
     flex: 0 0 50%; }
   .col-md-7 {
     flex: 0 0 58.33333%; }
-  .col-md-8, .col_ma_mid {
+  .col-md-8, .col_fotfixed_mid, .col_ma_mid {
     flex: 0 0 66.66667%; }
   .col-md-9 {
     flex: 0 0 75%; }
-  .col-md-10, .col_adData_md_mid {
+  .col-md-10, .col_chid_ffix_mid, .col_adData_md_mid {
     flex: 0 0 83.33333%; }
   .col-md-11 {
     flex: 0 0 91.66667%; }
@@ -1005,9 +1005,9 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-lg-1, .col_ma_right, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
+  .col-lg-1, .col_fotfixed_right, .col_chid_ffix_left, .col_chid_ffix_right, .col_ma_right, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
     flex: 0 0 8.33333%; }
-  .col-lg-2, .col_ma_left {
+  .col-lg-2, .col_fotfixed_left, .col_ma_left {
     flex: 0 0 16.66667%; }
   .col-lg-3 {
     flex: 0 0 25%; }
@@ -1021,9 +1021,9 @@ pre {
     flex: 0 0 58.33333%; }
   .col-lg-8 {
     flex: 0 0 66.66667%; }
-  .col-lg-9, .col_ma_mid {
+  .col-lg-9, .col_fotfixed_mid, .col_ma_mid {
     flex: 0 0 75%; }
-  .col-lg-10, .col_adData_md_mid {
+  .col-lg-10, .col_chid_ffix_mid, .col_adData_md_mid {
     flex: 0 0 83.33333%; }
   .col-lg-11 {
     flex: 0 0 91.66667%; }
@@ -1109,11 +1109,11 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 1200px) {
-  .col-xl-1, .col_ma_left, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
+  .col-xl-1, .col_fotfixed_left, .col_chid_ffix_left, .col_chid_ffix_right, .col_ma_left, .col_adData_tp_left_min, .col_adData_tp_right, .col_adData_md_left, .col_adData_md_right {
     flex: 0 0 8.33333%; }
-  .col-xl-2 {
+  .col-xl-2, .col_fotfixed_right, .col_ma_right {
     flex: 0 0 16.66667%; }
-  .col-xl-3, .col_ma_right {
+  .col-xl-3 {
     flex: 0 0 25%; }
   .col-xl-4 {
     flex: 0 0 33.33333%; }
@@ -1123,11 +1123,11 @@ pre {
     flex: 0 0 50%; }
   .col-xl-7 {
     flex: 0 0 58.33333%; }
-  .col-xl-8, .col_ma_mid {
+  .col-xl-8 {
     flex: 0 0 66.66667%; }
-  .col-xl-9 {
+  .col-xl-9, .col_fotfixed_mid, .col_ma_mid {
     flex: 0 0 75%; }
-  .col-xl-10, .col_adData_md_mid {
+  .col-xl-10, .col_chid_ffix_mid, .col_adData_md_mid {
     flex: 0 0 83.33333%; }
   .col-xl-11 {
     flex: 0 0 91.66667%; }
@@ -4761,6 +4761,77 @@ textarea::-webkit-input-placeholder {
   margin: 0px !important;
   padding: 0px !important; }
 
+.row_footer_fixed {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  margin: 0px !important;
+  padding: 0px !important; }
+
+.col_fotfixed_left {
+  height: 100%;
+  background: #00B0FF;
+  margin: 0px !important;
+  padding: 0px !important; }
+  @media (max-width: 544px) {
+    .col_fotfixed_left {
+      height: 20%; } }
+  @media (max-width: 731px) and (orientation: landscape) {
+    .col_fotfixed_left {
+      height: 25%; } }
+
+.col_fotfixed_mid {
+  height: 100%;
+  display: flex;
+  margin: 0px !important;
+  padding: 0px !important; }
+  @media (max-width: 544px) {
+    .col_fotfixed_mid {
+      height: 80%; } }
+  @media (max-width: 731px) and (orientation: landscape) {
+    .col_fotfixed_mid {
+      height: 75%; } }
+
+.col_fotfixed_right {
+  height: 100%;
+  margin: 0px !important;
+  padding: 0px !important; }
+  @media (max-width: 544px) {
+    .col_fotfixed_right {
+      height: 0; } }
+  @media (max-width: 731px) and (orientation: landscape) {
+    .col_fotfixed_right {
+      height: 0; } }
+
+.col_chid_ffix_left {
+  height: 100%;
+  margin: 0px !important;
+  padding: 0px !important; }
+  @media (max-width: 544px) {
+    .col_chid_ffix_left {
+      display: none; } }
+
+.col_chid_ffix_mid {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px !important;
+  padding: 0px !important; }
+
+.col_chid_ffix_right {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0px !important;
+  padding: 0px !important; }
+
 .col_ma_left {
   height: 100%;
   background: #00B0FF;
@@ -5227,56 +5298,34 @@ textarea::-webkit-input-placeholder {
   justify-content: center;
   margin: 0px !important;
   padding: 0px !important; }
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .col_adData_md_right {
-      justify-content: flex-end; } }
 
 /* panel data management */
 .cn_panel_datamg {
-  height: 70%;
+  width: 35%;
+  height: 100%;
   display: flex;
-  justify-content: flex-end; }
-  @media (max-width: 731px) and (orientation: landscape) {
-    .cn_panel_datamg {
-      height: 100%; } }
-  @media (max-width: 544px) {
-    .cn_panel_datamg {
-      width: 100%;
-      height: auto;
-      justify-content: center; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .cn_panel_datamg {
-      width: 100%;
-      height: 50%; } }
+  background: #FFF;
+  box-shadow: 0 0 10px #e0e6ea, -1px 20px 40px #e9eef1; }
 
 .ul_panel_datamg_items {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   margin: 0px !important;
   padding: 0px !important; }
-  @media (max-width: 544px) {
-    .ul_panel_datamg_items {
-      flex-direction: row;
-      align-self: center;
-      width: 80%; } }
   .ul_panel_datamg_items li {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     border-radius: 10px;
     padding-right: 1px; }
     .ul_panel_datamg_items li svg {
       width: 55%;
       cursor: pointer;
-      align-self: flex-start; }
+      align-self: center; }
     .ul_panel_datamg_items li svg:hover {
       fill: #00B0FF; }
-    @media (max-width: 544px) {
-      .ul_panel_datamg_items li {
-        justify-content: center; } }
 
 /* management data sector */
 /* search in data */
@@ -5326,7 +5375,6 @@ textarea::-webkit-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
-  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
@@ -5351,7 +5399,7 @@ textarea::-webkit-input-placeholder {
   background: #00B0FF; }
 
 .ul_boxsdatamg {
-  min-width: 45%;
+  min-width: 32%;
   height: 42%;
   display: flex;
   flex-direction: column;
@@ -5404,16 +5452,13 @@ textarea::-webkit-input-placeholder {
   display: flex;
   flex-direction: row;
   padding-left: 20px; }
-  .boxdatamg_li_mid svg {
-    width: 100%; }
   .boxdatamg_li_mid p {
-    padding-left: 6px;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0;
     margin: 0;
     align-self: flex-start;
-    font-size: 2em; }
+    font-size: 1.1em;
+    color: #ccc;
+    font-family: Helvetica, Arial, sans-serif; }
 
 .boxdatamg_li_bot {
   flex-direction: row; }
@@ -5457,19 +5502,6 @@ textarea::-webkit-input-placeholder {
   justify-content: center; }
   .boxdata_type svg {
     width: 100%; }
-
-.boxdat_timeatention {
-  align-self: center;
-  font-size: 1.5em;
-  margin: 0px !important;
-  padding: 0px !important;
-  font-family: Arial, Helvetica, sans-serif; }
-  @media (max-width: 731px) and (orientation: landscape) {
-    .boxdat_timeatention {
-      font-size: 1.5em; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .boxdat_timeatention {
-      font-size: 1.5em; } }
 
 .ul_topmiddlepanelmg {
   width: 60%;
